@@ -12,14 +12,14 @@ int main(int argc,char **argv)
 	image = imread(argv[1],CV_LOAD_IMAGE_COLOR);
 	if (argc != 2 || !image.data){
 		cout <<"No image data\n";
-		return -1
+		return -1;
 	}
 	cvtColor(image,image_gray.CV_RGB2Gray);
 	namedWindow("image",CV_WINDOW_AUTOSIZE);
 	namedWindow("gray image",CV_WINDOW_AUTOSIZE);
 	imshow("image",image);
 	imshow("image gray",image_gray);
-	waitKey(0)
+	waitKey(0);
 	return 0;
 }
 
